@@ -523,7 +523,8 @@
 					localStorage['audioFeed'] = String(this.src);
 					localStorage['audioName'] = String(this.name);
 					
-					if ('mediaSession' in navigator) {
+					// todo fix fail : src error via mobile
+					if (false && 'mediaSession' in navigator) {
 						navigator.mediaSession.metadata = new MediaMetadata({
 							title: this.title,
 							artist: this.name,
