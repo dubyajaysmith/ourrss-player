@@ -38,6 +38,8 @@
 			:host #expand {
 				transition: all .3s ease-out;
 				user-select: none;
+			    margin-right: 0rem;
+			    max-width: 3.5rem;
 			}
 			:host #expand.expand {
 				-o-transform: rotate(-180deg);
@@ -113,51 +115,43 @@
 			
 			:host .small-icon {
 				user-select: none;
-				width: 2rem;
-				height: auto;
-			}
-			
-			:host .semi-medium-icon {
-				user-select: none;
-				width: 2.7rem;
+				width: 20%;
 				height: auto;
 			}
 			:host .medium-icon {
 				user-select: none;
-				width: 3.8rem;
+				width: 25%;
 				height: auto;
 			}
-			
 			:host .large-icon {
-				width: 4rem;
+				width: 60%;
+				max-width:4rem;
 				height: auto;
 				padding: .5rem 0 .5rem 0;
 			}
 			
+			
 			:host .center {
 				text-align: center;
 			}
-			
 			:host .hide {
 				display: none;
 			}
-			
 			:host .spacer {
 				user-select: none;
 			}
-			
 			:host .circle {
 				border-radius: 50%;
 			}
-			
 			:host .left {
 				float: left;
 			}
-			
 			:host .right {
 				float: right;
 			}
-			
+			:host .max4 {
+				max-width: 4rem;
+			}
 			
 			
 			:host .volume {
@@ -249,18 +243,11 @@
 			}
 			
 			
-			
-			
-			
-			
-			
-			
 			:host .grid:after {
 				content: "";
 				display: table;
 				clear: both;
 			}
-			
 			:host [class*='col-'] {
 				float: left;
 			}
@@ -273,7 +260,7 @@
 			}
 			
 			:host .col-1-3 {
-				width: 10%;
+				width: 13%;
 			}
 			:host .col-2-3 {
 				width: 75%;
@@ -282,43 +269,35 @@
 				width: 10%;
 			}
 			
-			
-			.dark-primary-color {
+			:host .dark-primary-color {
 				background: #0288D1;
 			}
-			
-			.default-primary-color {
+			:host .default-primary-color {
 				background: #03A9F4;
 			}
-			
-			.light-primary-color {
+			:host .light-primary-color {
 				background: #B3E5FC;
 			}
-			
-			.text-primary-color {
+			:host .text-primary-color {
 				color: #FFFFFF;
 			}
-			
-			.accent-color {
+			:host .accent-color {
 				background: #FF4081;
 			}
-			
-			.primary-text-color {
+			:host .primary-text-color {
 				color: #212121;
 			}
-			
-			.secondary-text-color {
+			:host .secondary-text-color {
 				color: #757575;
 			}
-			
-			.divider-color {
+			:host .divider-color {
 				border-color: #BDBDBD;
 			}
-	</style>
+		</style>
 		
 		<section id="section" class="dark-primary-color ">
 			<div class="grid">
-		
+				
 				<div class="col-1-3 ">
 					&nbsp;
 					<span class="volume" style="display:none">
@@ -334,21 +313,21 @@
 		
 						<div class=" playcont">
 		
-							<svg id="back" class="medium-icon " viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet">
+							<svg id="back" class="medium-icon max4" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet">
 								<path class="path" fill="#B3E5FC" d="M12 5V1L7 6l5 5V7c3.3 0 6 2.7 6 6s-2.7 6-6 6-6-2.7-6-6H4c0 4.4 3.6 8 8 8s8-3.6 8-8-3.6-8-8-8zm-2.4 8.5h.4c.2 0 .4-.1.5-.2s.2-.2.2-.4v-.2s-.1-.1-.1-.2-.1-.1-.2-.1h-.5s-.1.1-.2.1-.1.1-.1.2v.2h-1c0-.2 0-.3.1-.5s.2-.3.3-.4.3-.2.4-.2.4-.1.5-.1c.2 0 .4 0 .6.1s.3.1.5.2.2.2.3.4.1.3.1.5v.3s-.1.2-.1.3-.1.2-.2.2-.2.1-.3.2c.2.1.4.2.5.4s.2.4.2.6c0 .2 0 .4-.1.5s-.2.3-.3.4-.3.2-.5.2-.4.1-.6.1c-.2 0-.4 0-.5-.1s-.3-.1-.5-.2-.2-.2-.3-.4-.1-.4-.1-.6h.8v.2s.1.1.1.2.1.1.2.1h.5s.1-.1.2-.1.1-.1.1-.2v-.5s-.1-.1-.1-.2-.1-.1-.2-.1h-.6v-.7zm5.7.7c0 .3 0 .6-.1.8l-.3.6s-.3.3-.5.3-.4.1-.6.1-.4 0-.6-.1-.3-.2-.5-.3-.2-.3-.3-.6-.1-.5-.1-.8v-.7c0-.3 0-.6.1-.8l.3-.6s.3-.3.5-.3.4-.1.6-.1.4 0 .6.1.3.2.5.3.2.3.3.6.1.5.1.8v.7zm-.8-.8v-.5c0-.1-.1-.2-.1-.3s-.1-.1-.2-.2-.2-.1-.3-.1-.2 0-.3.1l-.2.2s-.1.2-.1.3v2s.1.2.1.3.1.1.2.2.2.1.3.1.2 0 .3-.1l.2-.2s.1-.2.1-.3v-1.5z"></path>
 							</svg>
 							
 							<div id="playdiv" class="circle">
-								<svg id="play" class="medium-icon  active" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet">
+								<svg id="play" class="max4  active" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet">
 									<path class="path" fill="#B3E5FC" stroke="black" stroke-opacity="0.5"  d="M8 5v14l11-7z"></path>
 								</svg>
 		
-								<svg id="pause" class="medium-icon hide" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet">
+								<svg id="pause" class="max4 hide" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet">
 									<path class="path" fill="#B3E5FC" stroke="black" stroke-opacity="0.5" d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"></path>
 								</svg>
 							</div>
 						
-							<svg id="forward" class="medium-icon " viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet">
+							<svg id="forward" class="medium-icon max4" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet">
 								<path class="path" fill="#B3E5FC" d="M9.6 13.5h.4c.2 0 .4-.1.5-.2s.2-.2.2-.4v-.2s-.1-.1-.1-.2-.1-.1-.2-.1h-.5s-.1.1-.2.1-.1.1-.1.2v.2h-1c0-.2 0-.3.1-.5s.2-.3.3-.4.3-.2.4-.2.4-.1.5-.1c.2 0 .4 0 .6.1s.3.1.5.2.2.2.3.4.1.3.1.5v.3s-.1.2-.1.3-.1.2-.2.2-.2.1-.3.2c.2.1.4.2.5.4s.2.4.2.6c0 .2 0 .4-.1.5s-.2.3-.3.4-.3.2-.5.2-.4.1-.6.1c-.2 0-.4 0-.5-.1s-.3-.1-.5-.2-.2-.2-.3-.4-.1-.4-.1-.6h.8v.2s.1.1.1.2.1.1.2.1h.5s.1-.1.2-.1.1-.1.1-.2v-.5s-.1-.1-.1-.2-.1-.1-.2-.1h-.6v-.7zm5.7.7c0 .3 0 .6-.1.8l-.3.6s-.3.3-.5.3-.4.1-.6.1-.4 0-.6-.1-.3-.2-.5-.3-.2-.3-.3-.6-.1-.5-.1-.8v-.7c0-.3 0-.6.1-.8l.3-.6s.3-.3.5-.3.4-.1.6-.1.4 0 .6.1.3.2.5.3.2.3.3.6.1.5.1.8v.7zm-.9-.8v-.5s-.1-.2-.1-.3-.1-.1-.2-.2-.2-.1-.3-.1-.2 0-.3.1l-.2.2s-.1.2-.1.3v2s.1.2.1.3.1.1.2.2.2.1.3.1.2 0 .3-.1l.2-.2s.1-.2.1-.3v-1.5zM4 13c0 4.4 3.6 8 8 8s8-3.6 8-8h-2c0 3.3-2.7 6-6 6s-6-2.7-6-6 2.7-6 6-6v4l5-5-5-5v4c-4.4 0-8 3.6-8 8z"></path>
 							</svg>
 		
@@ -358,7 +337,7 @@
 				</div>
 		
 				<div class="col-3-3">
-					<svg id="expand" class="semi-medium-icon right" viewBox="0 0 24 24"> 
+					<svg id="expand" class="" viewBox="0 0 24 24"> 
 						<path class="path" fill="#B3E5FC" d="M13,20H11V8L5.5,13.5L4.08,12.08L12,4.16L19.92, 12.08L18.5,13.5L13,8V20Z"></path>
 					</svg>
 				</div>
@@ -443,15 +422,20 @@
 			attributeChangedCallback(attr, oldVal, newVal) {
 				
 				if(newVal){
-					this.log('-attr: ' + attr + '\n-oldVal: ' +  oldVal + ' \n-newVal: ' +  newVal)
+					//this.log('-attr: ' + attr + '\n-oldVal: ' +  oldVal + ' \n-newVal: ' +  newVal)
 					
-					'src' == attr ? this.dom.audio.src = newVal : ''
 					'name' == attr ? this.name = newVal : ''
 					'title' == attr ? this.title = newVal : ''
 					'image' == attr ? this.image = newVal : ''
 					'type' == attr ? this.type = newVal : ''
 					'volume' == attr ? this.dom.audio.volume = parseInt(newVal) : ''
 					'time' == attr ? this.dom.audio.currentTime = parseInt(newVal) : ''
+					
+					if('src' == attr){
+						this.log('-attr: ' + attr + '\n-oldVal: ' +  oldVal + ' \n-newVal: ' +  newVal)
+						this.dom.audio.src = newVal
+						this.dom.play.onclick()
+					}
 				}
 			}
 			
@@ -515,8 +499,8 @@
 					
 					//Tweak UI
 					this.dom.playdiv.style.backgroundImage = 'url(' +this.image+ ')'
-					this.dom.play.classList.toggle('hide')
-					this.dom.pause.classList.toggle('hide')
+					this.dom.play.classList.add('hide')
+					this.dom.pause.classList.remove('hide')
 					
 					//Mechanics
 					localStorage['audioImg'] = String(this.image);

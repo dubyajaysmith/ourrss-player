@@ -5,6 +5,8 @@
 	<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
 
 	<title>ourrss-player demo</title>
+	
+	<link href="ourrss-player.html" rel="import">
 	<style>
 		html, body {
 			width:100%;
@@ -13,6 +15,7 @@
 			vertical-align:middle;
 			text-align:center;
 			padding-top:10rem;
+			background:#eee;
 		}
 		
 		.heart {
@@ -21,13 +24,47 @@
 			top: 5px;
 			width: 2rem;
 		}
+		.dark-primary-color {
+			background: #0288D1;
+		}
+		.default-primary-color {
+			background: #03A9F4;
+		}
+		.light-primary-color {
+			background: #B3E5FC;
+		}
+		.text-primary-color {
+			color: #FFFFFF;
+		}
+		.accent-color {
+			background: #FF4081;
+		}
+		.primary-text-color {
+			color: #212121;
+		}
+		.secondary-text-color {
+			color: #757575;
+		}
+		.divider-color {
+			border-color: #BDBDBD;
+		}
+		
+		.grid:after {
+			content: "";
+			display: table;
+			clear: both;
+		}
+		[class*='col-'] {
+			float: left;
+		}
+		
+		.col-1-4,
+		.col-2-4,
+		.col-3-4,
+		.col-4-4 {
+			width: 25%;
+		}
 	</style>
-	
-	
-	<script src="webcomponents-lite.js"></script>
-	
-	<link href="ourrss-player.html" rel="import">
-
 </head>
 
 <body>
@@ -36,13 +73,11 @@
 		<path d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2
 		c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z"/>
 	</svg> 
-	by <a href="//jamiesmiths.com" target="_blank">Jamie Smith</a> 
-	
-	
-	
+	by <a href="//jamiesmiths.com" target="_blank">Jamie Smith</a>
 	
 	
 	<ourrss-player volume="" expand="" name="" time=""  type="" title="" src="" image=""></ourrss-player>
+	
 </body>
 
 <!-- for demo purpose. this would be done by other mechanics -->
