@@ -76,12 +76,13 @@
 	by <a href="//jamiesmiths.com" target="_blank">Jamie Smith</a>
 	
 	
-	<ourrss-player volume="" expand="" name="" time=""  type="" title="" src="" image=""></ourrss-player>
+	<ourrss-player volume="" expand="" name="" time=""  type="" title="" src="" image="" play=""></ourrss-player>
 	
 </body>
 
 <!-- for demo purpose. this would be done by other mechanics -->
 <script>
+(() => {
 	document.querySelector('ourrss-player').setAttribute('name', 'The Dollop')
 	document.querySelector('ourrss-player').setAttribute('title', '263 - The Texas Hypnocult (Live in Austin)')
 	document.querySelector('ourrss-player').setAttribute('src', 'https://traffic.libsyn.com/thedollop/Terri_Lee_Hoffman.mp3')
@@ -90,6 +91,8 @@
 	document.querySelector('ourrss-player').setAttribute('time', '10')
 	document.querySelector('ourrss-player').setAttribute('volume', '1')
 	document.querySelector('ourrss-player').setAttribute('id', '-KkiQrg6p5IUg9lCGtC1')
+	//document.querySelector('ourrss-player').setAttribute('play', true)
+})();
 </script>
 
 

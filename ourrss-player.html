@@ -3,15 +3,14 @@
 	<template>
 		
 		<style>
-			@import url('https://fonts.googleapis.com/css?family=Ubuntu:300');
 			
 			:host {
+				font-family: 'Ubuntu', sans-serif;
 				user-select: none;
 			}
 			
 			
 			:host section {
-				font-family: 'Ubuntu', sans-serif;
 				position: fixed;
 				bottom: 0px;
 				width: 100%;
@@ -19,7 +18,6 @@
 				height:5.5rem;
 			}
 			:host section.expand {
-				font-family: 'Ubuntu', sans-serif;
 				position: fixed;
 				bottom: 0px;
 				width: 100%;
@@ -430,11 +428,10 @@
 					'type' == attr ? this.type = newVal : ''
 					'volume' == attr ? this.dom.audio.volume = parseInt(newVal) : ''
 					'time' == attr ? this.dom.audio.currentTime = parseInt(newVal) : ''
+					'src' == attr ? this.dom.audio.src = newVal : ''
 					
-					if('src' == attr){
-						this.log('-attr: ' + attr + '\n-oldVal: ' +  oldVal + ' \n-newVal: ' +  newVal)
-						this.dom.audio.src = newVal
-						this.dom.play.onclick()
+					if('play' == attr){
+						newVal ? this.dom.play.onclick() : this.dom.pause.onclick() 
 					}
 				}
 			}
