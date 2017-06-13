@@ -16,6 +16,7 @@
 				width: 100%;
 				opacity: .9;
 				height:5.5rem;
+    			box-shadow: 0px 2px 4px 0 rgba(0, 0, 0, 0.2), 0px -4px 10px 0px rgba(0, 0, 0, 0.2);
 			}
 			:host section.expand {
 				position: fixed;
@@ -424,12 +425,13 @@
 					
 					'name' == attr ? this.name = newVal : ''
 					'title' == attr ? this.title = newVal : ''
-					'image' == attr ? this.image = newVal : ''
 					'type' == attr ? this.type = newVal : ''
 					'volume' == attr ? this.dom.audio.volume = parseInt(newVal) : ''
 					'time' == attr ? this.dom.audio.currentTime = parseInt(newVal) : ''
 					'src' == attr ? this.dom.audio.src = newVal : ''
 					
+					
+					'image' == attr ? this.image = newVal : ''
 					if('play' == attr){
 						newVal ? this.dom.play.onclick() : this.dom.pause.onclick() 
 					}
@@ -443,6 +445,7 @@
 				this.root = this.createShadowRoot()
 				this.root.appendChild(clone)
 				this.init()
+				
 			}
 		
 			
@@ -450,9 +453,8 @@
 			createdCallback() {
 				this.setProperties()
 				this.parseAttributes()
-				this.domTweaks()
-				
-				this.log('instance was created.')
+
+				//console.log('instance was created.')
 			}
 			
 			parseAttributes() {
@@ -543,7 +545,7 @@
 				}
 				
 				this.dom.back.onclick = () => {
-				  this.setAttribute('time', parseInt(this.getAttribute('time')) + 30)
+				  this.setAttribute('time', parseInt(this.getAttribute('time')) - 30)
 				}
 				
 				this.dom.progress.addEventListener('click', (e) => {
@@ -566,9 +568,6 @@
 				this.dom.paths.map(path => path.onclick = path.parentElement.onclick())
 			}
 			
-			domTweaks(){
-				
-			}
 		}
 		
 		if (document.createElement('ourrss-player').constructor !== OurrssPlayer) {
